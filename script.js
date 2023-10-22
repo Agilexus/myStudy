@@ -18,6 +18,7 @@ function myFirsApp(name, age) {
     }
 
     showSkills();
+    checkAge();
 
     function calcPow(num) {
         return num ** 2;
