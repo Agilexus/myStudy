@@ -15,10 +15,10 @@ function myFirsApp(name, age) {
                 console.log('Круто що ти так рано задумався про майбутнє:)')
             }
         }
+        checkAge();
     }
 
     showSkills();
-    checkAge();
 
     function calcPow(num) {
         return num ** 2;
