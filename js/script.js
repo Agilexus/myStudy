@@ -5,6 +5,18 @@ let chooseBtn = document.getElementById('choose'),
     phoneInput = document.querySelector('.contactform_phone'), //бере лише перший елемент зі сторінки 
     mailInput = document.querySelectorAll('.contactform_mail')[0]; // віддає масив
 
-function hover() {
-  heading.textContent = "Все ок";
+function hover(text) {
+  heading.textContent = `${text}`;
 }
+
+// chooseBtn.onmouseenter = hover; – такий метод майже не використовується
+
+// chooseBtn.addEventListener('mouseenter', function() {
+//   heading.textContent = "Все ок";
+// } ); // on - не потрібно, ця команде вже знає що ми будемо використовувати event
+
+// нижче найбліш правильний і популярний зараз спосіб використання івентів
+chooseBtn.addEventListener('mouseenter', hover("Все ок")); // те саме що вище, але якщо у нас вже є функція, то використовуємо її без ().
+
+chooseBtn.addEventListener('mouseleave', hover("Ще одна зміна"));
+
