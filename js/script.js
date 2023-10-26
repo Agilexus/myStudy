@@ -20,5 +20,5 @@ chooseBtn.addEventListener('mouseenter', hover); // те саме що вище,
 
 chooseBtn.addEventListener('click', function() {
   heading.textContent = 'Нова зміна';
-}));
+});
 
