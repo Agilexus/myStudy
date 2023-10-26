@@ -4,7 +4,9 @@ let chooseBtn = document.getElementById('choose'),
     nameInput = document.getElementsByClassName('contactform_name')[0], //віддає масив, тому в кінці проставлений індекс
     phoneInput = document.querySelector('.contactform_phone'), //бере лише перший елемент зі сторінки 
     mailInput = document.querySelectorAll('.contactform_mail')[0], // віддає масив
-    modal = document.querySelector('.modal');
+    modal = document.querySelector('.modal'),
+    closeBtn = document.querySelector('.close'),
+    text = document.getElementsByName('message')[0];
 
 function hover(text) {
   heading.textContent = 'все ок';
@@ -25,4 +27,12 @@ chooseBtn.addEventListener('mouseleave', function() {
 
 receiveBtn.addEventListener('click', function() {
   modal.style.display = 'block';
+})
+
+closeBtn.addEventListener('click', function() {
+  modal.style.display = 'none';
+})
+
+nameInput.addEventListener('input', function() {
+  text.value = `Мене звати ${nameInput.value}. І я хочу запитати `
 })
