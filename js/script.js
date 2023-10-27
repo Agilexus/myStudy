@@ -45,7 +45,21 @@ window.addEventListener('DOMContentLoaded', function() { //визначає чи
   openBtn.addEventListener('click', openCart);
   close.addEventListener('click', closeCart);
 
-  
+  // Додавання товару в коризину. Для цього нам потрібно копіювати картку товару і з копії видалити кнопку "додати в коризну"
+  // Спосіб 1:
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+      let item = products[i].cloneNode(true), //cloneNode(true) - дозволяє клонувати об‘єкт, а параметр true дозволяє зробити глибоке копіювання, в нашому випадку дів і все що всередині нього. Якщо не вказати true то скопіюється пустий дів.
+          btn = item.querySelector('button'); //знаходимо кнопку в нашому item
+      
+      btn.remove(); // видаляємо кнопку
+      field.appendChild(item); // додаємо товар в коризну
+      products[i].remove();
+
+    })
+  }
+
+
 })
 
 
