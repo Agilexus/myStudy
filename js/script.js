@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() { //визначає чи всі тегі вже завантажились на сторінці, тобто чи побудований наш DOM.
-  let product = document.querySelectorAll('.produc'),
+  let products = document.querySelectorAll('.product'),
       buttons = document.querySelectorAll('button'),
       openBtn = document.querySelector('.open');
 
