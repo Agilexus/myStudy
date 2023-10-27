@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', function() { //визначає чи
       let item = products[i].cloneNode(true), //cloneNode(true) - дозволяє клонувати об‘єкт, а параметр true дозволяє зробити глибоке копіювання, в нашому випадку дів і все що всередині нього. Якщо не вказати true то скопіюється пустий дів.
           btn = item.querySelector('button'); //знаходимо кнопку в нашому item
       
-      btn.remove(); // видаляємо кнопку
+      btn.textContent = "Видалити"; // видаляємо кнопку
       field.appendChild(item); // додаємо товар в коризну
       products[i].remove();
 
